@@ -1,4 +1,5 @@
 import "./css/style.css"
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import Nav from './components/Nav';
 
 function App() {
