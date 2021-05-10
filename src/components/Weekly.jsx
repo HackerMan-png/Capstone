@@ -2,8 +2,10 @@ import React from 'react'
 
 const Weekly = () => {
   return (
-    <div>
-      <p>Weekly</p>
+    <div className="Weekly">
+      <Container>
+        
+      </Container>
     </div>
   )
 }
