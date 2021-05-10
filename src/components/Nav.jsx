@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Container } from "react-bootstrap";
 import { BiMenu } from "react-icons/bi";
 
 const Nav = ({ changePage }) => {
