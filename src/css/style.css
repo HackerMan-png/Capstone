@@ -3,9 +3,7 @@
 *::after {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: none;
-          box-sizing: none;
-  -webkit-transition: all 0.5;
+  box-sizing: none;
   transition: all 0.5;
 }
 
@@ -29,7 +27,6 @@ body {
   left: 0;
   background-color: rgba(17, 17, 17, 0.781);
   overflow-x: hidden;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   padding-top: 60px;
 }
@@ -40,7 +37,6 @@ body {
   font-size: 25px;
   color: #818181;
   display: block;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
 }
@@ -72,9 +68,7 @@ body {
 
 .landing {
   height: 100vh;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .landing .container {
@@ -100,11 +94,8 @@ body {
 
 .landing .container .row .highLow {
   font-size: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 250px;
   margin: 0 auto;
 }
@@ -116,5 +107,39 @@ body {
 .landing .container .row .highLow p {
   height: 25px;
   margin-right: 50px;
+}
+
+.Hourly {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Hourly h1 {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.Hourly .boxes {
+  display: grid;
+  width: 400px;
+  height: 400px;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: auto auto auto;
+}
+
+.Hourly .box {
+  display: flex;
+  width: 120px;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  border: 3px solid black;
+  transition: 0.2s ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */
