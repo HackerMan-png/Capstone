@@ -7,7 +7,7 @@ const Hourly = () => {
     <div className = "Hourly">
 
       <header className="header">
-            <h1>Hourly</h1>
+            <h1>HOURLY</h1>
       </header>
 
       <div className="subHead">
