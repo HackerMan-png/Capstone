@@ -2,7 +2,7 @@
   "lat": 33.53,
   "lon": -112.18,
   "timezone": "America/Phoenix",
-  "timezone_offset": -25200,
+  "timezone_offset": -25200,  
   "current": {
     "dt": 1620014854,
     "sunrise": 1619959135,

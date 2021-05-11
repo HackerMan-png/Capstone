@@ -9,15 +9,62 @@
   transition: all 0.5;
 }
 
-.hamburger {
-  font-size: 3rem;
-  position: absolute;
-  cursor: pointer;
+html,
+body,
+.container {
+  width: 100%;
+  height: 100%;
+  min-width: 500px;
+  min-height: 500px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.container {
+  background-color: #ed0000;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #ed0000), to(#ffcccc));
+  background: linear-gradient(to bottom, #ed0000 1%, #ffcccc 100%);
+}
+
+#cloud-intro {
+  position: relative;
+  height: 100vh;
+  background: url(https://static.radulescu.me/examples/clouds/clouds1000.png);
+  background: url(https://static.radulescu.me/examples/clouds/clouds1000.png) 0 200px, url(https://static.radulescu.me/examples/clouds/clouds1200_1.png) 0 300px, url(https://static.radulescu.me/examples/clouds/clouds1000_blur3.png) 100px 250px;
+  -webkit-animation: wind 120s linear infinite;
+          animation: wind 120s linear infinite;
+}
+
+@-webkit-keyframes wind {
+  0% {
+    background-position: 0 200px, 0 300px, 100px 250px;
+  }
+  100% {
+    background-position: 1000px 200px, 1200px 300px, 1100px 250px;
+  }
+}
+
+@keyframes wind {
+  0% {
+    background-position: 0 200px, 0 300px, 100px 250px;
+  }
+  100% {
+    background-position: 1000px 200px, 1200px 300px, 1100px 250px;
+  }
 }
 
 body {
   font-family: "Lato", sans-serif;
-  background: skyblue !important;
+  background: #4c9aff !important;
+  overflow: hidden;
+}
+
+.hamburger {
+  font-size: 3rem;
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .sidenav {
@@ -70,52 +117,64 @@ body {
   }
 }
 
-.landing {
-  height: 100vh;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.landing .container {
-  height: 100vh;
-}
-
-.landing .container .row {
-  height: 100vh;
-}
-
-.landing .container .row .temp {
-  margin-top: 80px;
-  font-size: 13rem;
-  text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  height: auto;
-}
-
-.landing .container .row .location {
-  text-align: center;
-  font-size: 4rem;
-}
-
-.landing .container .row .highLow {
-  font-size: 2rem;
+.currentWrapper #cloud-intro {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 250px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.currentWrapper #cloud-intro .infoWrapper {
+  background-color: rgba(255, 255, 255, 0.658);
+  height: 80vh;
+  width: 60%;
   margin: 0 auto;
+  border-radius: 5%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.landing .container .row .highLow .bold {
-  font-weight: bold;
+.currentWrapper #cloud-intro .infoWrapper .temp {
+  margin-top: 10px;
+  margin-bottom: -50px;
+  font-size: 13rem;
+  height: 20%;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: auto;
 }
 
-.landing .container .row .highLow p {
-  height: 25px;
-  margin-right: 50px;
+.currentWrapper #cloud-intro .infoWrapper .location {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 30px;
+}
+
+.currentWrapper #cloud-intro .infoWrapper .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.currentWrapper #cloud-intro .infoWrapper .row div {
+  width: 20%;
+  height: 100px;
+  text-align: center;
 }
 
 .Weekly {
@@ -130,7 +189,7 @@ body {
   margin-top: 20%;
   font-size: 3.5rem;
   text-align: left;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   height: auto;
 }
 
@@ -138,7 +197,7 @@ body {
   margin-top: 20%;
   text-align: right;
   font-size: 1.5rem;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .Hourly {
@@ -156,11 +215,29 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  /* Scale up the box */
+  /* Fade in the pseudo-element with the bigger shadow */
 }
 
 .Hourly h1 {
   text-align: center;
   padding-top: 10px;
+}
+
+.Hourly .subHead {
+  overflow: hidden;
+  width: 70%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.Hourly .temp {
+  float: left;
+}
+
+.Hourly .cityState {
+  float: right;
 }
 
 .Hourly .boxes {
@@ -173,16 +250,17 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
+  -ms-grid-columns: auto auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto auto;
 }
 
 .Hourly .box {
+  background-color: gainsboro;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 120px;
-  height: 120px;
+  width: 170px;
+  height: 170px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -191,8 +269,21 @@ body {
           justify-content: center;
   font-size: 3rem;
   font-weight: bold;
-  border: 3px solid black;
+  border: 1.7px solid black;
+  border-radius: 5px;
+  margin: 0 25px 28px auto;
+  -webkit-box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3);
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
+}
+
+.Hourly .box:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+.Hourly .box:hover::after {
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */

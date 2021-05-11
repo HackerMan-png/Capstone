@@ -10,11 +10,9 @@ const Hourly = () => {
             <h1>Hourly</h1>
       </header>
 
-      <div className="temp">
-        <p>58°F</p>
-      </div>
-      <div className="cityState">
-        <p>Columbus, OH</p>
+      <div className="subHead">
+        <h5 className="temp">58°F</h5>
+        <h5 className="cityState">Columbus, OH</h5>
       </div>
 
       <div class="boxes">
@@ -27,6 +25,9 @@ const Hourly = () => {
                 <div id="box6" class="box"></div>
                 <div id="box7" class="box"></div>
                 <div id="box8" class="box"></div>
+                <div id="box9" class="box"></div>
+                <div id="box10" class="box"></div>
+                <div id="box11" class="box"></div>
             </div>
 
     </div>

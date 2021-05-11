@@ -1,30 +1,43 @@
 import React from 'react';
 import { Container, Row, Col } from "react-bootstrap";
+import info from "../weather.json"
 
 const Landing = () => {
   return (
-    <div className="landing">
-      <Container >
-        <Row className="justify-content-center">
-          <Col lg="12">
+    <div className="currentWrapper">
 
-            <div className="temp">
-              <p>69°F</p>
+      <div id="cloud-intro">
+
+        <div className="infoWrapper">
+
+          <div className="temp">
+            <p>{info.current.temp.toFixed(0)}°F</p>
+          </div>
+
+          <div className="location">
+            <p>{info.timezone}</p>
+          </div>
+
+          <div className="row">
+            <div className="feelsLike">
+              <p>Feels Like</p>
+              <p>{info.current.feels_like}°F</p>
             </div>
 
-            <div className="location">
-              <p>Cheyenne, WY</p>
+            <div className="humidity">
+              <p>Humidity</p>
+              <p>{info.current.humidity}%</p>
             </div>
-            <div className="highLow">
-              <p className="bold">Low</p>
-              <p className="bold">High</p>
-              <p>62°F</p>
-              <p>74°F</p>
+
+            <div className="windSpeed">
+              <p>Wind Speed</p>
+              <p>{info.current.wind_speed} MPH</p>
             </div>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+      </div>
     </div>
+
   )
 }
 
