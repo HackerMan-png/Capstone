@@ -117,4 +117,27 @@ body {
   height: 25px;
   margin-right: 50px;
 }
+
+.Weekly {
+  height: 100vh;
+}
+
+.Weekly .container {
+  height: 100vh;
+}
+
+.Weekly .container .row .temp {
+  margin-top: 20%;
+  font-size: 3.5rem;
+  text-align: left;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  height: auto;
+}
+
+.Weekly .container .row .location {
+  margin-top: 20%;
+  text-align: right;
+  font-size: 1.5rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 /*# sourceMappingURL=style.css.map */
