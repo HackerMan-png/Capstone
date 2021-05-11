@@ -115,11 +115,27 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* Scale up the box */
+  /* Fade in the pseudo-element with the bigger shadow */
 }
 
 .Hourly h1 {
   text-align: center;
   padding-top: 10px;
+}
+
+.Hourly .subHead {
+  overflow: hidden;
+  width: 70%;
+  justify-content: space-between;
+}
+
+.Hourly .temp {
+  float: left;
+}
+
+.Hourly .cityState {
+  float: right;
 }
 
 .Hourly .boxes {
@@ -128,18 +144,30 @@ body {
   height: 400px;
   align-content: center;
   justify-content: center;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto auto auto;
 }
 
 .Hourly .box {
+  background-color: gainsboro;
   display: flex;
-  width: 120px;
-  height: 120px;
+  width: 170px;
+  height: 170px;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
   font-weight: bold;
-  border: 3px solid black;
+  border: 1.7px solid black;
+  border-radius: 5px;
+  margin: 0 25px 28px auto;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3);
   transition: 0.2s ease-in-out;
+}
+
+.Hourly .box:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.Hourly .box:hover::after {
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
