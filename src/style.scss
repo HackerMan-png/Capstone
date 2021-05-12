@@ -20,9 +20,8 @@ body,
   overflow: hidden;
 }
 
-.container {
-  background-color: #ed0000;
-  background: linear-gradient(to bottom, #ed0000 1%, #ffcccc 100%);
+.currentWrapper {
+  // background-color: rgb(78, 78, 255);
 }
 #cloud-intro {
   position: relative;
@@ -43,7 +42,7 @@ body,
 }
 body {
   font-family: "Lato", sans-serif;
-  background: rgb(76, 154, 255) !important;
+  // background: rgb(70, 150, 255) !important;
   overflow: hidden;
 }
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -118,7 +117,10 @@ body {
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .currentWrapper {
+  width: 100%;
+  overflow: hidden;
   #cloud-intro {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -156,6 +158,101 @@ body {
           width: 20%;
           height: 100px;
           text-align: center;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .currentWrapper {
+    width: 100%;
+    #cloud-intro {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      overflow-x: hidden;
+      .infoWrapper {
+        .temp {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          font-size: 8rem;
+          height: 20%;
+          height: auto;
+        }
+
+        .location {
+          font-size: 2rem;
+          margin-bottom: 50px;
+        }
+        .row {
+          font-size: 1.3rem;
+
+          div {
+            width: 50%;
+            height: 100px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .currentWrapper {
+    #cloud-intro {
+      height: 100vh;
+      .infoWrapper {
+        .temp {
+          margin-top: 10px;
+          margin-bottom: 20px;
+          font-size: 10rem;
+          height: 20%;
+          height: auto;
+        }
+
+        .location {
+          font-size: 2.5rem;
+          margin-bottom: 50px;
+        }
+        .row {
+          font-size: 1.5rem;
+          font-weight: 500;
+
+          div {
+            width: 50%;
+            height: 100px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .currentWrapper {
+    #cloud-intro {
+      .infoWrapper {
+        .temp {
+          margin-top: 10px;
+          margin-bottom: -50px;
+          font-size: 13rem;
+          height: 20%;
+          height: auto;
+        }
+
+        .location {
+          font-size: 4rem;
+          margin-bottom: 30px;
+        }
+        .row {
+          font-size: 1.5rem;
+          font-weight: 500;
+
+          div {
+            width: 30%;
+            height: 100px;
+          }
         }
       }
     }
