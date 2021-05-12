@@ -204,6 +204,7 @@ body {
   border: 3px black solid;
   border-left: none;
   height: 350px;
+  background-color: #00b7ff;
 }
 
 .Weekly .container .row .days h1 {
@@ -211,6 +212,7 @@ body {
   font-size: 2.7rem;
   position: relative;
   top: 3%;
+  border-bottom: 3px black solid;
 }
 
 .Weekly .container .row .days .weekday {
@@ -231,30 +233,5 @@ body {
 
 #mon {
   border-left: 3px black solid;
-  background-color: lightsalmon;
-}
-
-#tue {
-  background-color: #65c4ff;
-}
-
-#wed {
-  background-color: lightyellow;
-}
-
-#thu {
-  background-color: lightseagreen;
-}
-
-#fri {
-  background-color: lightpink;
-}
-
-#sat {
-  background-color: #7c507c;
-}
-
-#sun {
-  background-color: wheat;
 }
 /*# sourceMappingURL=style.css.map */
