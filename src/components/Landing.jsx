@@ -21,7 +21,7 @@ const Landing = () => {
           <div className="row">
             <div className="feelsLike">
               <p>Feels Like</p>
-              <p>{info.current.feels_like}°F</p>
+              <p>{info.current.feels_like.toFixed(0)}°F</p>
             </div>
 
             <div className="humidity">
@@ -31,13 +31,12 @@ const Landing = () => {
 
             <div className="windSpeed">
               <p>Wind Speed</p>
-              <p>{info.current.wind_speed} MPH</p>
+              <p>{info.current.wind_speed.toFixed(0)} MPH</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-
   )
 }
 
