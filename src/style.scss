@@ -408,16 +408,49 @@ body {
     margin: auto;
     align-content: center;
     transition: 0.2s ease-in-out;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .box::-webkit-scrollbar {
+    display: none;
+  }
+
+  .box:hover h1 {
+    display: none;
+  }
+
+  ul {
     list-style-type: none;
+    display: none;
+    position: absolute;
+    top: 20px;
+    font-size: 40%;
+    overflow: hidden;
+    width: 100%;
+    justify-content: space-between;
   }
 
   .box:hover {
     transform: scale(1.15, 1.15);
     box-shadow: 0 0 10px white;
+    margin: 0;
+  }
+
+  .box:hover {
+    ul {
+      display: block;
+    }
+  }
+  .box:hover::after {
+    ul {
+      opacity: 1;
+      transition: 0.2s ease-out;
+    }
   }
 
   .box:hover::after {
     opacity: 1;
-    transition: 0.2s ease-out;
+    transition: 0.9s ease-out;
   }
 }
