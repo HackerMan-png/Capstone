@@ -7,13 +7,11 @@ import data from "./weather.json"
 function App() {
   const [landing, setLanding] = useState(true)
   const [hourly, setHourly] = useState(false)
-  const [today, setToday] = useState(false)
   const [weekly, setWeekly] = useState(false)
 
   const changePage = (page) => {
       setHourly(false);
       setLanding(false);
-      setToday(false);
       setWeekly(false);
 
       switch (page) {
@@ -23,9 +21,6 @@ function App() {
         case "hourly":
           setHourly(true)
           break;
-        case "today":
-          setToday(true)
-          break
         case "weekly":
           setWeekly(true)
           break
@@ -38,7 +33,6 @@ function App() {
       <Nav changePage={changePage} />
       {landing && <Landing />}
       {hourly && <Hourly />}
-      {today && <Today />}
       {weekly && <Weekly />}
     </div>
   );
