@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./css/style.css"
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
-import { Nav, Landing, Hourly, Today, Weekly } from './components/exports.jsx';
+import { Nav, Landing, Hourly, Weekly } from './components/exports.jsx';
 import data from "./weather.json"
 
 function App() {
