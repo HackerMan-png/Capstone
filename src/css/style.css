@@ -3,7 +3,9 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: none;
+  -webkit-box-sizing: none;
+          box-sizing: none;
+  -webkit-transition: all 0.5;
   transition: all 0.5;
 }
 
@@ -24,7 +26,17 @@ body,
   height: 100vh;
   background: url(https://static.radulescu.me/examples/clouds/clouds1000.png);
   background: url(https://static.radulescu.me/examples/clouds/clouds1000.png) 0 200px, url(https://static.radulescu.me/examples/clouds/clouds1200_1.png) 0 300px, url(https://static.radulescu.me/examples/clouds/clouds1000_blur3.png) 100px 250px;
-  animation: wind 120s linear infinite;
+  -webkit-animation: wind 120s linear infinite;
+          animation: wind 120s linear infinite;
+}
+
+@-webkit-keyframes wind {
+  0% {
+    background-position: 0 200px, 0 300px, 100px 250px;
+  }
+  100% {
+    background-position: 1000px 200px, 1200px 300px, 1100px 250px;
+  }
 }
 
 @keyframes wind {
@@ -57,6 +69,7 @@ body {
   left: 0;
   background-color: rgba(17, 17, 17, 0.781);
   overflow-x: hidden;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   padding-top: 60px;
 }
@@ -67,6 +80,7 @@ body {
   font-size: 25px;
   color: #818181;
   display: block;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
 }
@@ -103,9 +117,15 @@ body {
 
 .currentWrapper #cloud-intro {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .currentWrapper #cloud-intro .infoWrapper {
@@ -114,7 +134,9 @@ body {
   width: 60%;
   margin: 0 auto;
   border-radius: 5%;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .currentWrapper #cloud-intro .infoWrapper .temp {
@@ -134,9 +156,16 @@ body {
 }
 
 .currentWrapper #cloud-intro .infoWrapper .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 1.5rem;
   font-weight: 500;
 }
@@ -152,9 +181,15 @@ body {
     width: 100%;
   }
   .currentWrapper #cloud-intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     overflow-x: hidden;
   }
@@ -226,19 +261,24 @@ body {
 }
 
 .Weekly {
-  height: 90vh;
   height: 100vh;
 }
 
 .Weekly .container {
   height: 90vh;
+  width: 100%;
+}
+
+.Weekly .container .row {
+  width: 95%;
+  position: relative;
+  left: 3%;
 }
 
 .Weekly .container .row .temp {
   margin-top: 10%;
   font-size: 3.7rem;
   text-align: left;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   height: auto;
   position: relative;
   left: 10%;
@@ -248,17 +288,17 @@ body {
   margin-top: 12%;
   text-align: right;
   font-size: 2rem;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   position: relative;
   right: 10%;
 }
 
 .Weekly .container .row .days {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   border: 3px black solid;
-  border-left: none;
   height: 350px;
-  background-color: #00b7ff;
+  background-color: rgba(255, 255, 255, 0.658);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .Weekly .container .row .days h1 {
@@ -266,15 +306,17 @@ body {
   font-size: 2.7rem;
   position: relative;
   top: 3%;
-  border-bottom: 3px black solid;
+  border-bottom: 2px black solid;
+  border-radius: 20%;
 }
 
 .Weekly .container .row .days .weekday {
-  border-top: 3px black solid;
+  border-top: 2px black solid;
   font-size: 1.8rem;
   text-align: center;
   position: relative;
   top: 60%;
+  border-radius: 20%;
 }
 
 .Weekly .container .row .days .date {
@@ -286,15 +328,68 @@ body {
 }
 
 #mon {
-  border-left: 3px black solid;
+  border-left: 2px black solid;
+  border-radius: 5%;
+  position: relative;
+  right: 3%;
+  width: 350px;
+}
+
+#tue {
+  border-radius: 5%;
+  position: relative;
+  right: 2%;
+  width: 350px;
+}
+
+#wed {
+  border-radius: 5%;
+  position: relative;
+  right: 1%;
+}
+
+#thu {
+  border-radius: 5%;
+  position: relative;
+  width: 350px;
+}
+
+#fri {
+  border-radius: 5%;
+  position: relative;
+  left: 1%;
+  width: 350px;
+}
+
+#sat {
+  border-radius: 5%;
+  position: relative;
+  left: 2%;
+  width: 350px;
+}
+
+#sun {
+  border-radius: 5%;
+  position: relative;
+  left: 3%;
+  width: 350px;
 }
 
 .Hourly {
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .Hourly h1 {
@@ -305,7 +400,9 @@ body {
 .Hourly .subHead {
   overflow: hidden;
   width: 70%;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .Hourly .temp {
@@ -317,40 +414,57 @@ body {
 }
 
 .Hourly .boxes {
+  display: -ms-grid;
   display: grid;
   width: 400px;
   height: 400px;
-  align-content: center;
-  justify-content: center;
-  justify-self: center;
-  grid-template-columns: auto auto auto auto auto auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-grid-columns: auto auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto auto;
   gap: 20px 20px;
 }
 
 .Hourly .box {
   background-color: rgba(255, 255, 255, 0.658);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 170px;
   height: 170px;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 3rem;
   font-weight: bold;
   border: 1px solid black;
   border-radius: 5%;
   margin: auto;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
   list-style-type: none;
 }
 
 .Hourly .box:hover {
-  transform: scale(1.15, 1.15);
-  box-shadow: 0 0 10px white;
+  -webkit-transform: scale(1.15, 1.15);
+          transform: scale(1.15, 1.15);
+  -webkit-box-shadow: 0 0 10px white;
+          box-shadow: 0 0 10px white;
 }
 
 .Hourly .box:hover::after {
   opacity: 1;
+  -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
 }
 /*# sourceMappingURL=style.css.map */
