@@ -392,23 +392,27 @@ width: 350px;
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 .Hourly {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
 
-  h1 {
+  .header {
     text-align: center;
-    padding-top: 10px;
   }
 
   .subHead {
     overflow: hidden;
     width: 70%;
     justify-content: space-between;
+  }
+
+  h5 {
+    font-size: 30px;
   }
 
   .temp {
@@ -432,27 +436,48 @@ width: 350px;
   .box {
     background-color: rgba(255, 255, 255, 0.658);
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 170px;
     height: 170px;
-    align-items: center;
-    justify-content: center;
     font-size: 3rem;
     font-weight: bold;
     border: 1px solid black;
     border-radius: 5%;
-    margin: auto;
-    align-content: center;
     transition: 0.2s ease-in-out;
     overflow-y: scroll;
     overflow-x: hidden;
+
+    h1 {
+      text-align: center;
+      align-items: flex-start;
+      font-size: 30px;
+    }
+
+    icons {
+      text-align: center;
+      align-items:center;
+      font-size: 30px;
+    }
+
+    .Hour {
+      text-align: center;
+      align-items: flex-end;
+      font-size: 20px;
+    }
   }
 
   .box::-webkit-scrollbar {
     display: none;
   }
 
-  .box:hover h1 {
-    display: none;
+  .box:hover {
+    h1 {
+      display: none;
+    }
+    .Hour {
+      display: none;
+    }
   }
 
   ul {
