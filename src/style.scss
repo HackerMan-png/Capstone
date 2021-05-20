@@ -410,23 +410,27 @@ width: 350px;
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 .Hourly {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
 
-  h1 {
+  .header {
     text-align: center;
-    padding-top: 10px;
   }
 
   .subHead {
     overflow: hidden;
     width: 70%;
     justify-content: space-between;
+  }
+
+  h5 {
+    font-size: 30px;
   }
 
   .temp {
@@ -437,40 +441,80 @@ width: 350px;
   }
 
   .boxes {
-    display: grid;
-    width: 400px;
-    height: 400px;
-    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80%;
+    max-height: 80%;
+
+    margin: auto;
     justify-content: center;
     justify-self: center;
-    grid-template-columns: auto auto auto auto auto auto;
     gap: 20px 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 
   .box {
     background-color: rgba(255, 255, 255, 0.658);
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 170px;
     height: 170px;
-    align-items: center;
-    justify-content: center;
     font-size: 3rem;
     font-weight: bold;
     border: 1px solid black;
     border-radius: 5%;
-    margin: auto;
-    align-content: center;
     transition: 0.2s ease-in-out;
     overflow-y: scroll;
     overflow-x: hidden;
+
+    h1 {
+      text-align: center;
+      align-items: flex-start;
+      font-size: 30px;
+    }
+
+    .icons {
+      align-items:center;
+      width: 45%;
+      height: 45%;
+      margin: {
+        top: 9px;
+        bottom: 9px;
+        left: auto;
+        right: auto;
+      }
+    }
+
+    .Hour {
+      text-align: center;
+      align-items: flex-end;
+      font-size: 20px;
+    }
   }
 
-  .box::-webkit-scrollbar {
-    display: none;
-  }
+  .box:hover {
+    transform: scale(1.15, 1.15);
+    box-shadow: 0 0 10px white;
+    margin: 0;
 
-  .box:hover h1 {
-    display: none;
+    h1 {
+      display: none;
+    }
+
+    ul {
+      display: block;
+    }
+
+    .Hour {
+      display: none;
+    }
+
+    .icons {
+      display: none;
+    }
+
   }
 
   ul {
@@ -484,27 +528,29 @@ width: 350px;
     justify-content: space-between;
   }
 
-  .box:hover {
-    transform: scale(1.15, 1.15);
-    box-shadow: 0 0 10px white;
-    margin: 0;
-  }
+  .boxes::-webkit-scrollbar {
+    display: none;
 
-  .box:hover {
-    ul {
-      display: block;
+    ::after {
+      scroll-behavior: smooth;
     }
   }
-  .box:hover::after {
-    ul {
-      opacity: 1;
-      transition: 0.2s ease-out;
+  .box::-webkit-scrollbar {
+    display: none;
+
+    ::after {
+      scroll-behavior: smooth;
     }
   }
 
   .box:hover::after {
     opacity: 1;
     transition: 0.9s ease-out;
-    color: #ffee8c;
+
+    ul {
+      opacity: 1;
+      transition: 0.2s ease-out;
+    }
   }
+
 }
