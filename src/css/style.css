@@ -270,10 +270,17 @@ body {
   width: 100%;
 }
 
+.Weekly .container .title {
+  position: absolute;
+  bottom: 50%;
+  left: 43%;
+}
+
 .Weekly .container .row {
   width: 95%;
   position: relative;
   left: 3%;
+  bottom: 1%;
 }
 
 .Weekly .container .row .temp {
@@ -283,6 +290,7 @@ body {
   height: auto;
   position: relative;
   left: 10%;
+  font-weight: 500;
 }
 
 .Weekly .container .row .location {
@@ -291,6 +299,7 @@ body {
   font-size: 2rem;
   position: relative;
   right: 10%;
+  font-weight: 500;
 }
 
 .Weekly .container .row .days {
@@ -318,6 +327,7 @@ body {
   position: relative;
   top: 60%;
   border-radius: 20%;
+  font-weight: 500;
 }
 
 .Weekly .container .row .days .date {
@@ -333,7 +343,7 @@ body {
   font-size: 1.8rem;
   width: 75px;
   position: relative;
-  top: .6%;
+  bottom: 21%;
   line-height: 80%;
 }
 
@@ -342,8 +352,14 @@ body {
   font-size: 1.8rem;
   position: relative;
   left: 60%;
-  bottom: 23%;
+  bottom: 45%;
   line-height: 80%;
+}
+
+.Weekly .container .row img {
+  position: relative;
+  bottom: 30%;
+  left: 23%;
 }
 
 #mon {
@@ -442,10 +458,15 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+<<<<<<< HEAD
   max-width: 1200px;
   max-height: 400px;
   overflow-x: hidden;
   overflow-y: scroll;
+=======
+  max-width: 80%;
+  max-height: 80%;
+>>>>>>> f4e657dbe5aa2355f2688650b059460ade3eeb63
   margin: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -512,6 +533,10 @@ body {
           transform: scale(1.15, 1.15);
   -webkit-box-shadow: 0 0 10px white;
           box-shadow: 0 0 10px white;
+<<<<<<< HEAD
+=======
+  margin: 0;
+>>>>>>> f4e657dbe5aa2355f2688650b059460ade3eeb63
 }
 
 .Hourly .box:hover h1 {
