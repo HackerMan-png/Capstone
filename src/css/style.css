@@ -4,7 +4,9 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: none;
+  -webkit-box-sizing: none;
+          box-sizing: none;
+  -webkit-transition: all 0.5;
   transition: all 0.5;
 }
 
@@ -25,7 +27,17 @@ body,
   height: 100vh;
   background: url(https://static.radulescu.me/examples/clouds/clouds1000.png);
   background: url(https://static.radulescu.me/examples/clouds/clouds1000.png) 0 200px, url(https://static.radulescu.me/examples/clouds/clouds1200_1.png) 0 300px, url(https://static.radulescu.me/examples/clouds/clouds1000_blur3.png) 100px 250px;
-  animation: wind 120s linear infinite;
+  -webkit-animation: wind 120s linear infinite;
+          animation: wind 120s linear infinite;
+}
+
+@-webkit-keyframes wind {
+  0% {
+    background-position: 0 200px, 0 300px, 100px 250px;
+  }
+  100% {
+    background-position: 1000px 200px, 1200px 300px, 1100px 250px;
+  }
 }
 
 @keyframes wind {
@@ -58,6 +70,7 @@ body {
   left: 0;
   background-color: rgba(17, 17, 17, 0.781);
   overflow-x: hidden;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   padding-top: 60px;
 }
@@ -68,6 +81,7 @@ body {
   font-size: 25px;
   color: #818181;
   display: block;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
 }
@@ -104,9 +118,15 @@ body {
 
 .currentWrapper #cloud-intro {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .currentWrapper #cloud-intro .infoWrapper {
@@ -115,7 +135,9 @@ body {
   width: 60%;
   margin: 0 auto;
   border-radius: 5%;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .currentWrapper #cloud-intro .infoWrapper .temp {
@@ -135,9 +157,16 @@ body {
 }
 
 .currentWrapper #cloud-intro .infoWrapper .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 1.5rem;
   font-weight: 500;
 }
@@ -153,9 +182,15 @@ body {
     width: 100%;
   }
   .currentWrapper #cloud-intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     overflow-x: hidden;
   }
@@ -263,6 +298,7 @@ body {
   border: 1px black solid;
   height: 350px;
   background-color: rgba(255, 255, 255, 0.658);
+  -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
 
@@ -359,10 +395,19 @@ body {
 }
 
 .Hourly {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 100vh;
   font-family: 'Open Sans', sans-serif;
 }
@@ -374,7 +419,9 @@ body {
 .Hourly .subHead {
   overflow: hidden;
   width: 70%;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .Hourly h5 {
@@ -390,29 +437,43 @@ body {
 }
 
 .Hourly .boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  max-width: 80%;
-  max-height: 80%;
-  margin: auto;
-  justify-content: center;
-  justify-self: center;
-  gap: 20px 20px;
-  overflow-y: scroll;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1200px;
+  max-height: 400px;
   overflow-x: hidden;
+  overflow-y: scroll;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-self: center;
+  padding: 20px 20px;
+  gap: 20px 20px;
 }
 
 .Hourly .box {
   background-color: rgba(255, 255, 255, 0.658);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 170px;
   height: 170px;
   font-size: 3rem;
   font-weight: bold;
   border: 1px solid black;
   border-radius: 5%;
+  -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -420,12 +481,16 @@ body {
 
 .Hourly .box h1 {
   text-align: center;
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   font-size: 30px;
 }
 
 .Hourly .box .icons {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 45%;
   height: 45%;
   margin-top: 9px;
@@ -436,14 +501,17 @@ body {
 
 .Hourly .box .Hour {
   text-align: center;
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   font-size: 20px;
 }
 
 .Hourly .box:hover {
-  transform: scale(1.15, 1.15);
-  box-shadow: 0 0 10px white;
-  margin: 0;
+  -webkit-transform: scale(1.15, 1.15);
+          transform: scale(1.15, 1.15);
+  -webkit-box-shadow: 0 0 10px white;
+          box-shadow: 0 0 10px white;
 }
 
 .Hourly .box:hover h1 {
@@ -470,7 +538,9 @@ body {
   font-size: 40%;
   overflow: hidden;
   width: 100%;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .Hourly .boxes::-webkit-scrollbar {
@@ -491,11 +561,13 @@ body {
 
 .Hourly .box:hover::after {
   opacity: 1;
+  -webkit-transition: 0.9s ease-out;
   transition: 0.9s ease-out;
 }
 
 .Hourly .box:hover::after ul {
   opacity: 1;
+  -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
 }
 /*# sourceMappingURL=style.css.map */
