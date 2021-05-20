@@ -12,7 +12,7 @@ const Weekly = () => {
       
       <Container style={{ background: arr[hour - 1] }}>
   <Row>
-    <h1 className="title">Weekly</h1>
+    <h1 className="title">WEEKLY</h1>
     <Col className="temp">{info.current.temp.toFixed(0)}°F</Col>
     <Col className="location">America/Phoenix</Col>
   </Row>
