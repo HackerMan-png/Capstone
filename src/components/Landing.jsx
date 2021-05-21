@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-// import { Container, Row, Col } from "react-bootstrap";
+
+import dayBackground from "../media/dayBackground.jpg"
+import duskBackground from "../media/duskBackground.png"
+import nightBackground from "../media/nightBackground.png"
 import info from "../weather.json"
 
 const Landing = () => {
