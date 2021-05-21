@@ -9,6 +9,15 @@ const Landing = () => {
 
   // const [hour, setHour] = useState(0)
   // let interval;
+  const findBackground = () =>{
+    if(hour <= 18){
+      return dayBackground
+    }else if(hour <= 20){
+      return duskBackground
+    }else if (hour <= 24){
+      return nightBackground
+    }
+  }
 
   let hour = new Date().getHours()
   const arr = ['#040b3c', '#040b3c', '#192861', '#28166b', '#004372', '#016792', '#07729f', '#07729f', '#12a1c0', '#12a1c0', '#12a1c0', '#01C9D6', '#74c9e3', '#74c9e3', '#fd9e58', '#f18448', '#f06b7e', '#ca5a92', '#5b2c83', '#371a79', '#28166b', '#192861', '#040b3c', '#040b3c']
@@ -22,9 +31,9 @@ const Landing = () => {
   // }
 
   return (
-    <div className="currentWrapper" style={{ background: arr[hour - 1] }}>
+    <div className="currentWrapper" style={{ backgroundImage: `url(${findBackground()})`}}>
 
-      <div id="cloud-intro">
+      {/* <div id="cloud-intro"> */}
 
         <div className="infoWrapper">
 
@@ -55,7 +64,7 @@ const Landing = () => {
           </div>
         </div>
       </div>
-    </div>
+    // </div>
   )
 }
 

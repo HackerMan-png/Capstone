@@ -114,22 +114,11 @@ body {
 .currentWrapper {
   width: 100%;
   overflow: hidden;
+  height: 100vh;
+  background-size: cover;
 }
 
-.currentWrapper #cloud-intro {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.currentWrapper #cloud-intro .infoWrapper {
+.currentWrapper .infoWrapper {
   background-color: rgba(255, 255, 255, 0.658);
   height: 80vh;
   width: 60%;
@@ -140,7 +129,7 @@ body {
           align-items: center;
 }
 
-.currentWrapper #cloud-intro .infoWrapper .temp {
+.currentWrapper .infoWrapper .temp {
   margin-top: 10px;
   margin-bottom: -50px;
   font-size: 13rem;
@@ -150,13 +139,13 @@ body {
   height: auto;
 }
 
-.currentWrapper #cloud-intro .infoWrapper .location {
+.currentWrapper .infoWrapper .location {
   text-align: center;
   font-size: 4rem;
   margin-bottom: 30px;
 }
 
-.currentWrapper #cloud-intro .infoWrapper .row {
+.currentWrapper .infoWrapper .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,7 +160,7 @@ body {
   font-weight: 500;
 }
 
-.currentWrapper #cloud-intro .infoWrapper .row div {
+.currentWrapper .infoWrapper .row div {
   width: 20%;
   height: 100px;
   text-align: center;
@@ -181,81 +170,65 @@ body {
   .currentWrapper {
     width: 100%;
   }
-  .currentWrapper #cloud-intro {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
-    overflow-x: hidden;
-  }
-  .currentWrapper #cloud-intro .infoWrapper .temp {
+  .currentWrapper .infoWrapper .temp {
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 8rem;
     height: 20%;
     height: auto;
   }
-  .currentWrapper #cloud-intro .infoWrapper .location {
+  .currentWrapper .infoWrapper .location {
     font-size: 2rem;
     margin-bottom: 50px;
   }
-  .currentWrapper #cloud-intro .infoWrapper .row {
+  .currentWrapper .infoWrapper .row {
     font-size: 1.3rem;
   }
-  .currentWrapper #cloud-intro .infoWrapper .row div {
+  .currentWrapper .infoWrapper .row div {
     width: 50%;
     height: 100px;
   }
 }
 
 @media (min-width: 576px) {
-  .currentWrapper #cloud-intro {
-    height: 100vh;
-  }
-  .currentWrapper #cloud-intro .infoWrapper .temp {
+  .currentWrapper .infoWrapper .temp {
     margin-top: 10px;
     margin-bottom: 20px;
     font-size: 10rem;
     height: 20%;
     height: auto;
   }
-  .currentWrapper #cloud-intro .infoWrapper .location {
+  .currentWrapper .infoWrapper .location {
     font-size: 2.5rem;
     margin-bottom: 50px;
   }
-  .currentWrapper #cloud-intro .infoWrapper .row {
+  .currentWrapper .infoWrapper .row {
     font-size: 1.5rem;
     font-weight: 500;
   }
-  .currentWrapper #cloud-intro .infoWrapper .row div {
+  .currentWrapper .infoWrapper .row div {
     width: 50%;
     height: 100px;
   }
 }
 
 @media (min-width: 992px) {
-  .currentWrapper #cloud-intro .infoWrapper .temp {
+  .currentWrapper .infoWrapper .temp {
     margin-top: 10px;
     margin-bottom: -50px;
     font-size: 13rem;
     height: 20%;
     height: auto;
   }
-  .currentWrapper #cloud-intro .infoWrapper .location {
+  .currentWrapper .infoWrapper .location {
     font-size: 4rem;
     margin-bottom: 30px;
   }
-  .currentWrapper #cloud-intro .infoWrapper .row {
+  .currentWrapper .infoWrapper .row {
     font-size: 1.5rem;
     font-weight: 500;
   }
-  .currentWrapper #cloud-intro .infoWrapper .row div {
+  .currentWrapper .infoWrapper .row div {
     width: 30%;
     height: 100px;
   }
@@ -426,7 +399,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   min-height: 100vh;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   background-size: cover;
 }
 
