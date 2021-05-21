@@ -16,7 +16,7 @@ const Weekly = () => {
     <Col className="temp">{info.current.temp.toFixed(0)}°F</Col>
     <Col className="location">America/Phoenix</Col>
   </Row>
-  <Row>
+  <Row className="hebdomad">
   <Col className="days" id="mon"><h1>{info.daily[0].temp.day.toFixed(0)}°F</h1><p className="weekday"> Monday </p><p className="date">5/10/21</p>
   <img src={clearDay} alt="clearDay" className="icons"/>
     <div className= "min"><p>Low</p><p>{info.daily[0].temp.min.toFixed(0)}°F</p></div>

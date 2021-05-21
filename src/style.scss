@@ -267,7 +267,13 @@ body {
 // ! Weekly Styling
 .Weekly {
   // background-color: #74c9e3;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  min-width: fit-content;
   // justify-content: center;
   .container {
     height: 90vh;
@@ -276,7 +282,8 @@ body {
     .title{
       position: absolute;
       bottom: 50%;
-      left: 43%;
+      left: 41.5%;
+    
 
 }
     .row {
@@ -345,7 +352,7 @@ body {
         }
 
         .min{
-          border-right: 2px solid black;
+          // border-right: 2px solid black;
           font-size: 1.8rem;
           width: 75px;
           position: relative;
@@ -417,7 +424,136 @@ width: 350px;
 
   }
 
+  @media(max-width: 1199px) {
+    .Weekly {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Open Sans', sans-serif;
+      min-width: fit-content;
+      .container {
+      // width: 188px;
+        // justify-content: space-between;
+        width: max-content;
+        .title{
+          position: absolute;
+          bottom: 50%;
+          left: 41.5%;
+        
+    
+    }
+        .row.hebdomad {
+          height: 100%;
+          width: 100%;
+          // overflow-y: scroll;
+              overflow-x: scroll;
+          flex-wrap: inherit;
+        }
+          
+    
+          // .temp {
+          
+          // }
+    
+            // .location{
+            //
+            // }
+
+              .days{
+                height: 350px ;
+                width: 188px !important;
+              }
+
+            .days::-webkit-scrollbar {
+              display: block;
+              
+              ::after {
+                scroll-behavior: smooth;
+              }
+              // h1 {
+                
+              // }
+              // .weekday {
+                
+              // }
+              // .date {
+                
+              // }
+            }
+    
+            .min{
+            font-size: 1.5rem !important;
+            }
+            .max{
+            font-size: 1.5rem !important;
+            position: relative;
+            bottom: 42.5% !important;
+            }
+            img{
+              position: relative;
+              left: 20% !important;
+            }
+          }
+    
+        }
+      }
+      #mon {
+        width: 188px !important;
+        position: relative;
+        right: 0%;
+        left: 0%;
+        font-size: auto;
+      }
+      #tue {
+        width: 188px !important;
+        position: relative;
+        right: 0%;
+        left: 0%;
+        font-size: auto;
+      }
+      #wed {
+        width: 188px !important;
+        position: relative;
+        right: 0%;
+        left: 0%;
+        font-size: auto;
+    
+      }
+      #thu {
+        width: 188px !important;
+        position: relative;
+        right: 0%;
+        left: 0%;
+        font-size: auto;
+    
+      }
+      #fri {
+        width: 188px !important;
+        position: relative;
+        right: 0%;
+        left: 0%;
+        font-size: auto;
+    
+      }
+      #sat {
+        width: 188px !important;
+        position: relative;
+        right: 0%;
+        left: 0%;
+        font-size: auto;
+
+      }
+      #sun {
+        width: 188px !important;
+        position: relative;
+        right: 0%;
+        left: 0%;
+        font-size: small;
+    }
   
+
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
