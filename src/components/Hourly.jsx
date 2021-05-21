@@ -14,14 +14,12 @@ const Hourly = () => {
     
     <div className = "Hourly" style={{ background: arr[hour - 1] }}>
 
-      <header className="header">
-            <h1>HOURLY</h1>
-      </header>
+    <div className="header">
+      <h1 className="title">HOURLY</h1>
 
-      <div className="subHead">
-        <h5 className="temp">{info.current.temp.toFixed(0)}°F</h5>
-        <h5 className="cityState">{info.timezone}</h5>
-      </div>
+      <h5 className="temp">{info.current.temp.toFixed(0)}°F</h5>
+      <h5 className="cityState">{info.timezone}</h5>
+    </div>
 
       <div class="boxes">
 
@@ -304,7 +302,7 @@ const Hourly = () => {
         <div id="hour24" class="box">
           <h1>{info.hourly[23].temp.toFixed(0)}°F</h1>
 
-          <img src={clearDay} alt="clearDay" className="icons"/>
+          <img src={partlyCloudyDay} alt="partyCloudyDay" className="icons"/>
           
           <p className="Hour">12:00am</p>
             <ul>

@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Teko&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Teko&display=swap");
 *,
 *::before,
 *::after {
@@ -50,7 +53,7 @@ body,
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   overflow: hidden;
 }
 
@@ -146,7 +149,7 @@ body {
   font-size: 13rem;
   height: 20%;
   text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   height: auto;
 }
 
@@ -303,7 +306,7 @@ body {
 }
 
 .Weekly .container .row .days {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   border: 1px black solid;
   height: 350px;
   background-color: rgba(255, 255, 255, 0.658);
@@ -429,10 +432,7 @@ body {
 }
 
 .Hourly .header {
-  text-align: center;
-}
-
-.Hourly .subHead {
+  margin-top: 127px;
   overflow: hidden;
   width: 70%;
   -webkit-box-pack: justify;
@@ -440,16 +440,23 @@ body {
           justify-content: space-between;
 }
 
+.Hourly .header .title {
+  margin: 0;
+  text-align: center;
+}
+
+.Hourly .header .temp {
+  float: left;
+  margin: 0;
+}
+
+.Hourly .header .cityState {
+  float: right;
+  margin: 0;
+}
+
 .Hourly h5 {
   font-size: 30px;
-}
-
-.Hourly .temp {
-  float: left;
-}
-
-.Hourly .cityState {
-  float: right;
 }
 
 .Hourly .boxes {
@@ -458,16 +465,14 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-<<<<<<< HEAD
   max-width: 1200px;
   max-height: 400px;
   overflow-x: hidden;
   overflow-y: scroll;
-=======
-  max-width: 80%;
-  max-height: 80%;
->>>>>>> f4e657dbe5aa2355f2688650b059460ade3eeb63
-  margin: auto;
+  margin-top: 0;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -477,7 +482,7 @@ body {
 }
 
 .Hourly .box {
-  background-color: rgba(255, 255, 255, 0.658);
+  background-color: rgba(255, 255, 255, 0.87);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -506,14 +511,15 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   font-size: 30px;
+  margin: 0;
 }
 
 .Hourly .box .icons {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 45%;
-  height: 45%;
+  width: auto;
+  height: auto;
   margin-top: 9px;
   margin-bottom: 9px;
   margin-left: auto;
@@ -526,6 +532,7 @@ body {
       -ms-flex-align: end;
           align-items: flex-end;
   font-size: 20px;
+  margin: 0;
 }
 
 .Hourly .box:hover {
@@ -533,10 +540,6 @@ body {
           transform: scale(1.15, 1.15);
   -webkit-box-shadow: 0 0 10px white;
           box-shadow: 0 0 10px white;
-<<<<<<< HEAD
-=======
-  margin: 0;
->>>>>>> f4e657dbe5aa2355f2688650b059460ade3eeb63
 }
 
 .Hourly .box:hover h1 {
