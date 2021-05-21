@@ -1,27 +1,38 @@
 import React from 'react';
 import { icons } from 'react-icons/lib';
 import info from "../weather.json";
+import dayBackground from "../media/dayBackground.jpg"
+import duskBackground from "../media/duskBackground.png"
+import nightBackground from "../media/nightBackground.png"
 import clearDay from './icons/clearDay.png';
 import partlyCloudyDay from './icons/partlyCloudyDay.png';
 
 const Hourly = () => {
 
   let hour = new Date().getHours();
+  // let hour = 21;
   const arr = ['#040b3c', '#040b3c', '#192861', '#28166b', '#004372', '#016792', '#07729f', '#07729f', '#12a1c0', '#12a1c0', '#12a1c0', '#01C9D6', '#74c9e3', '#74c9e3', '#fd9e58', '#f18448', '#f06b7e', '#ca5a92', '#5b2c83', '#371a79', '#28166b', '#192861', '#040b3c', '#040b3c']
 
+  const findBackground = () =>{
+    if(hour <= 18){
+      return dayBackground
+    }else if(hour <= 20){
+      return duskBackground
+    }else if (hour <= 24){
+      return nightBackground
+    }
+  }
 
   return (
     
-    <div className = "Hourly" style={{ background: arr[hour - 1] }}>
+    <div className = "Hourly" style={{ backgroundImage: `url(${findBackground()})`}}>
 
-      <header className="header">
-            <h1>HOURLY</h1>
-      </header>
+    <div className="header">
+      <h1 className="title" style = {{ color: (hour > 20) && "white"}}>HOURLY</h1>
 
-      <div className="subHead">
-        <h5 className="temp">{info.current.temp.toFixed(0)}°F</h5>
-        <h5 className="cityState">{info.timezone}</h5>
-      </div>
+      <h5 className="temp" style = {{ color: (hour > 20) && "white"}}>{info.current.temp.toFixed(0)}°F</h5>
+      <h5 className="cityState" style = {{ color: (hour > 20) && "white"}}>{info.timezone}</h5>
+    </div>
 
       <div class="boxes">
 
@@ -304,7 +315,7 @@ const Hourly = () => {
         <div id="hour24" class="box">
           <h1>{info.hourly[23].temp.toFixed(0)}°F</h1>
 
-          <img src={clearDay} alt="clearDay" className="icons"/>
+          <img src={partlyCloudyDay} alt="partyCloudyDay" className="icons"/>
           
           <p className="Hour">12:00am</p>
             <ul>

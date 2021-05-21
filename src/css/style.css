@@ -484,7 +484,7 @@ body {
   }
   .Weekly .container img {
     position: relative;
-    left: 20% !important;
+    left: 50%;
   }
 }
 
