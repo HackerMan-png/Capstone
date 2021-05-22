@@ -71,15 +71,15 @@ _Design for Computers & Large Displays_
 
 _—_
 
-![alt text](src\media\README-images\landing.png)
+![alt text](https://github.com/HackerMan-png/capstone/blob/main/src/media/README-images/landing.png?raw=true)
 
 Above is the design of the landing page of Desert Sky Weather. The site has a dynamic color-changing background that syncs with the current time. It shows a brief overview of the current weather metrics, including the current temperature, the approximate “feels like” temperature, the humidity, and the estimated wind speed. On the top left, a slide-out navbar appears with three options: Today, the current page, Hourly, which gives a more in-depth look at certain metrics by the hour, and Weekly, which shows some metrics about each day of the week for seven days.
 
-![alt text](src\media\README-images\hourly.png)
+![alt text](https://github.com/HackerMan-png/capstone/blob/main/src/media/README-images/hourly.png?raw=true)
 
 The next design is for the Hourly page of the site. This page shows the current temperature and location in the top left and right corners respectively. In the middle of the page, 24 block represent the 24 hours of the day, ranging from 1:00 AM to 12:00 AM the next day. Each block shows the time it represents, the temperature, and the weather condition represented by an icon, for example, a sun for a clear day. When the user hovers over any block with the cursor, it becomes a scrollable block that shows the "real-feel" temperature, the humidity, and the wind speed. The grid that contains the block is also scrollable.
 
-![alt text](src\media\README-images\weekly.png)
+![alt text](https://github.com/HackerMan-png/capstone/blob/main/src/media/README-images/weekly.png?raw=true)
 
 The final design is the Weekly page. This page covers the high, low, and average temperatures as well as the expected weather condition, once again represented with an icon just like in Hourly. Each day is represented with a card that displays all of this information, with the date on the bottom of each card. If the window is small enough, the cards can be scrolled horizontally from left to right.
 
